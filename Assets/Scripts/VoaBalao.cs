@@ -26,6 +26,7 @@ public class VoaBalao : MonoBehaviour
         {
             pontos.Add();
             GameObject.Find("Audio").GetComponent<AudioSource>().PlayOneShot(burst);
+            FindObjectOfType<SpawnaBalao>().spawnRate = Math.Max(1.4f - pontos.Qtd / 200f, 0.1f);
             var p = Instantiate(particles);
             p.transform.position = gameObject.transform.position;
             Destroy(gameObject);

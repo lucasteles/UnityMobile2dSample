@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4135535416546797259}
   m_Layer: 0
   m_Name: balao
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,3 +242,4 @@ MonoBehaviour:
   speed: 3
   particles: {fileID: 3809388386685809029, guid: c20f899cc1bc5415eaadb3dee0034657, type: 3}
   burst: {fileID: 8300000, guid: 64a573f977be84d02998d4351db2e724, type: 3}
+  pontos: {fileID: 0}

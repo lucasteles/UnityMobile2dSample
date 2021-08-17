@@ -9,8 +9,12 @@ public class SpawnaFaca : MonoBehaviour
     public float CoolDownEmSegundos = 0;
     public float TempoPraDestruir = 0;
 
+    public AudioClip som;
+    public AudioSource audioSource;
+
     float tempoPassado = 0;
     Camera main;
+    public bool stop;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class SpawnaFaca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (stop) return;
         Vector2? pos = null;
         if (Input.touchCount == 1)
         {
@@ -36,6 +40,7 @@ public class SpawnaFaca : MonoBehaviour
         if (tempoPassado >= CoolDownEmSegundos && pos.HasValue)
         {
             var novaFaca = Instantiate(facaPrefab);
+            audioSource.PlayOneShot(som);
             Destroy(novaFaca, TempoPraDestruir);
             var facaPos = main.ScreenToWorldPoint(pos.Value);
             facaPos.z = main.nearClipPlane;
