@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Go: {fileID: 1859651879}
+  Som: {fileID: 8300000, guid: 4724d9c3b07024b87872b8687fe030d2, type: 3}
 --- !u!50 &82847206
 Rigidbody2D:
   serializedVersion: 4
